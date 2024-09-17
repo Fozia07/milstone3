@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic resume builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div>
+        <h1>Dynamic Resume Builder</h1>
+     <form id="resume-build">
+      <fieldset class="box">            
+           <label class="personinfo">Personal Information</label><br><br>
+            <label for="name" class="personid">Name:</label>
+           <input id="name" class="info"type="text" placeholder="enter your name"></input><br><br>
+           <label for="phoneNo" class="personid">phone no:</label>
+           <input id="phoneNo" class="info" type="number" placeholder="enter your No"></input><br><br>
+           <label for="email" class="personid">Email:</label>
+          <input id="email" class="info"type="email" placeholder="enter your email"></input><br><br>
+            
+        </fieldset>
+        <fieldset class="box">
+           
+           <label for="education" class="personinfo">Education</label><br><br>
+           <textarea id="education"></textarea>
+       </fieldset>
+       
+        <fieldset class="box">
+            
+            <label for="skill" class="personinfo">skill</label><br><br>
+            <textarea id="skill"></textarea>
+        </fieldset>
+        <fieldset class="box">
+        
+            <label for="work experiance" class="personinfo">work experience</label><br><br>
+            <textarea id="experiance"></textarea>
+        </fieldset>
+            
+            <button id="gernateresume" type="submit" >gernate resume</button> 
+    </form> 
+     </div>
+     <br>
+    <!-- gernate resume -->
+     <div id="resume_display">
+         
+     </div>
+     <script src="index.js"></script>
+</body>
+</html>
