@@ -8,42 +8,64 @@
 </head>
 <body>
    <div>
+       <div id="container">  
+    <form id="formPage">
         <h1>Dynamic Resume Builder</h1>
-     <form id="resume-build">
       <fieldset class="box">            
-           <label class="personinfo">Personal Information</label><br><br>
-            <label for="name" class="personid">Name:</label>
+           <legend class="personinfo">Personal Information</legend><br><br>
+            <label for="photo"> upload photo</label>
+            <input type="file" id="photo" name="photo"><br><br>
+
+           <label for="name" class="personid" required>Name:</label>
            <input id="name" class="info"type="text" placeholder="enter your name"></input><br><br>
-           <label for="phoneNo" class="personid">phone no:</label>
+           
+           <label for="phoneNo" class="personid" required>phone no:</label>
            <input id="phoneNo" class="info" type="number" placeholder="enter your No"></input><br><br>
-           <label for="email" class="personid">Email:</label>
+          
+           <label for="email" class="personid" required>Email:</label>
           <input id="email" class="info"type="email" placeholder="enter your email"></input><br><br>
             
         </fieldset>
         <fieldset class="box">
-           
+           <legend class="personinfo" >Education</legend>
            <label for="education" class="personinfo">Education</label><br><br>
            <textarea id="education"></textarea>
        </fieldset>
        
         <fieldset class="box">
-            
-            <label for="skill" class="personinfo">skill</label><br><br>
+            <legend class="personinfo">skills</legend>
+            <label for="skill" class="personinfo">type your skill</label><br><br>
             <textarea id="skill"></textarea>
         </fieldset>
         <fieldset class="box">
-        
-            <label for="work experiance" class="personinfo">work experience</label><br><br>
-            <textarea id="experiance"></textarea>
+            <legend class="personinfo">Experiance</legend>
+            <label for="work experience" class="personinfo">work experience</label><br><br>
+            <textarea id="experience" ></textarea>
         </fieldset>
             
-            <button id="gernateresume" type="submit" >gernate resume</button> 
-    </form> 
+            <button type="submit" >gernate resume</button> 
+    </form>
+    </div> 
      </div>
      <br>
     <!-- gernate resume -->
-     <div id="resume_display">
-         
+     <div id="resumePage" class="hidden">
+        <div id="resumeContent" class="resume-content">
+           <img id="resumePhoto"class="resume-photo" src="" alt="photo">
+           <h1 id="resumeName"></h1>
+           <p id="resumePhone"></p>
+           <p id="resumeEmail"></p>
+           <h2 >Education</h2>
+           <p id="resumeEducation"></p>
+           <h2>skills</h2>
+           <p id="resumeSkill"></p>
+           <h2>Experiance</h2>
+           <p id="resumeExperience"></p>
+
+        </div>
+        <div>
+            <button id="backButton" onclick="window.location.href='index.html'">back to form</button>
+        </div>
      </div>
      <script src="index.js"></script>
 </body>
